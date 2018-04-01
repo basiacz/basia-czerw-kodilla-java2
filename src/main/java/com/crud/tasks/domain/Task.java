@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name="task")
+@Entity(name="tasks")
 public class Task {
 
     @Id
