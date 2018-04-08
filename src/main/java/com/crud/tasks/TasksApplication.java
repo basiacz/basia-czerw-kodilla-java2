@@ -6,17 +6,17 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
+//dla Tomcata
+//public class TasksApplication extends SpringBootServletInitializer{
 public class TasksApplication {
-	//dla zewnetrznego tomcata
-//public class TasksApplication extends SpringBootServletInitializer {
-	//dla intellij i heroku
+
 	public static void main(String[] args) {
 		SpringApplication.run(TasksApplication.class, args);
 	}
 
-	//dla zewnetrznego tomcata
+	//dla Tomcata
 //	@Override
-//	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-//		return builder.sources(TasksApplication.class);
+//	protected SpringApplicationBuilder configure (SpringApplicationBuilder application) {
+//		return application.sources(TasksApplication.class);
 //	}
 }

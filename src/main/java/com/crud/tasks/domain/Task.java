@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Task {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name="name")
