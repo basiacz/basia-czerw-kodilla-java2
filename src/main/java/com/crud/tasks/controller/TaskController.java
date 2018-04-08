@@ -1,6 +1,5 @@
 package com.crud.tasks.controller;
 
-import com.crud.tasks.controller.TaskNotFoundException;
 import com.crud.tasks.domain.TaskDto;
 import com.crud.tasks.mapper.TaskMapper;
 import com.crud.tasks.service.DbService;
@@ -26,7 +25,7 @@ public class TaskController {
         return taskMapper.mapToTaskDtoList(service.getAllTasks());
     }
     @RequestMapping(method = RequestMethod.GET, value = "getTask")
-    public TaskDto getTask(@RequestParam Long taskId) throws TaskNotFoundException {
+    public TaskDto getTask(@RequestParam Long taskId) throws TaskNotFoundException{
         return taskMapper.mapToTaskDto(service.getTask(taskId).orElseThrow(TaskNotFoundException::new));
     }
     @RequestMapping(method = RequestMethod.DELETE, value = "deleteTask")
