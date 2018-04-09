@@ -23,6 +23,12 @@ public class TrelloBoardDto {
     @JsonProperty("lists")
     private List<TrelloListDto> lists;
 
+    public TrelloBoardDto(String name, String id, List<TrelloListDto> lists) {
+        this.name = name;
+        this.id = id;
+        this.lists = lists;
+    }
+
     public String getName() {
         return name;
     }
